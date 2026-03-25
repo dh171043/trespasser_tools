@@ -1,0 +1,162 @@
+[
+    {
+        "name": "Hat",
+        "placement": "Head",
+        "wgt": "L",
+        "ar": 1,
+        "ar_dice": 6,
+        "price": 10
+    },
+    {
+        "name": "Helm",
+        "placement": "Head",
+        "wgt": "L",
+        "ar": 1,
+        "ar_dice": 8,
+        "price": 50
+    },
+    {
+        "name": "Great Helm",
+        "placement": "Head",
+        "wgt": "H",
+        "ar": 2,
+        "ar_dice": 10,
+        "price": 200
+    },
+    {
+        "name": "Quilted Armor",
+        "placement": "Chest",
+        "wgt": "L",
+        "ar": 1,
+        "ar_dice": 6,
+        "price": 50
+    },
+    {
+        "name": "Leather Armor",
+        "placement": "Chest",
+        "wgt": "L",
+        "ar": 1,
+        "ar_dice": 8,
+        "price": 100
+    },
+    {
+        "name": "Chainmail",
+        "placement": "Chest",
+        "wgt": "H",
+        "ar": 2,
+        "ar_dice": 8,
+        "price": 200
+    },
+    {
+        "name": "Platemail",
+        "placement": "Chest",
+        "wgt": "H",
+        "ar": 3,
+        "ar_dice": 10,
+        "price": 300
+    },
+    {
+        "name": "Gloves",
+        "placement": "Arms",
+        "wgt": "L",
+        "ar": 0,
+        "ar_dice": 6,
+        "price": 10
+    },
+    {
+        "name": "Bracers",
+        "placement": "Arms",
+        "wgt": "L",
+        "ar": 1,
+        "ar_dice": 8,
+        "price": 50
+    },
+    {
+        "name": "Gauntlets",
+        "placement": "Arms",
+        "wgt": "H",
+        "ar": 2,
+        "ar_dice": 10,
+        "price": 100
+    },
+    {
+        "name": "Boots",
+        "placement": "Legs",
+        "wgt": "L",
+        "ar": 0,
+        "ar_dice": 6,
+        "price": 10
+    },
+    {
+        "name": "High Boots",
+        "placement": "Legs",
+        "wgt": "L",
+        "ar": 0,
+        "ar_dice": 8,
+        "price": 50
+    },
+    {
+        "name": "Greaves",
+        "placement": "Legs",
+        "wgt": "H",
+        "ar": 1,
+        "ar_dice": 10,
+        "price": 100
+    },
+    {
+        "name": "Mantle",
+        "placement": "Outer",
+        "wgt": "L",
+        "ar": 0,
+        "ar_dice": 6,
+        "price": 10
+    },
+    {
+        "name": "Cloak",
+        "placement": "Outer",
+        "wgt": "L",
+        "ar": 0,
+        "ar_dice": 8,
+        "price": 20
+    },
+    {
+        "name": "Long Coat",
+        "placement": "Outer",
+        "wgt": "H",
+        "ar": 0,
+        "ar_dice": 10,
+        "price": 50
+    },
+    {
+        "name": "Buckler",
+        "placement": "Shield",
+        "wgt": "-",
+        "ar": 0,
+        "ar_dice": 6,
+        "price": 10
+    },
+    {
+        "name": "Round Shield",
+        "placement": "Shield",
+        "wgt": "-",
+        "ar": 2,
+        "ar_dice": 6,
+        "price": 50
+    },
+    {
+        "name": "Heater Shield",
+        "placement": "Shield",
+        "wgt": "-",
+        "ar": 2,
+        "ar_dice": 8,
+        "price": 100
+    },
+    {
+        "name": "Kite Shield",
+        "placement": "Shield",
+        "wgt": "-",
+        "ar": 2,
+        "ar_dice": 10,
+        "price": 150
+    }
+]

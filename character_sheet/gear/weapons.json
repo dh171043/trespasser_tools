@@ -1,0 +1,289 @@
+[
+    {
+        "name": "Battle Axe",
+        "damage_dice": 8,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **frail 2**.",
+        "price": 75
+    },
+    {
+        "name": "Crude Weapon",
+        "damage_dice": 4,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **toppled**.",
+        "price": 0
+    },
+    {
+        "name": "Cudgel",
+        "damage_dice": 6,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **toppled**",
+        "price": 10
+    },
+    {
+        "name": "Crossbow",
+        "damage_dice": 10,
+        "ranges": [
+            "missile 10"
+        ],
+        "properties": "two-handed",
+        "_effect": "Confer **bleeding 4",
+        "price": 75
+    },
+    {
+        "name": "Dagger",
+        "damage_dice": 4,
+        "ranges": [
+            "melee",
+            "missile 4"
+        ],
+        "properties": "thrown",
+        "_effect": "Add 2 weapon dice to your total damage dealt.",
+        "price": 10
+    },
+    {
+        "name": "Flail",
+        "damage_dice": 8,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **inaccurate 2.",
+        "price": 50
+    },
+    {
+        "name": "Free Hand",
+        "damage_dice": 4,
+        "ranges": [
+            "melee",
+            "spell = int + 1",
+            "unarmed"
+        ],
+        "properties": "-",
+        "_effect": "-",
+        "price": 0
+    },
+    {
+        "name": "Greataxe",
+        "damage_dice": 10,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "two-handed",
+        "_effect": "Confer **frail 2**.",
+        "price": 150
+    },
+    {
+        "name": "Greatsword",
+        "damage_dice": 10,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "two-handed",
+        "_effect": "Confer **unguarded 2**.",
+        "price": 200
+    },
+    {
+        "name": "Halberd",
+        "damage_dice": 8,
+        "ranges": [
+            "melee 2"
+        ],
+        "properties": "two-handed",
+        "_effect": "**Sweep 1**. Confer **toppled**.",
+        "price": 75
+    },
+    {
+        "name": "hatchet",
+        "damage_dice": 6,
+        "ranges": [
+            "melee",
+            "missile 4"
+        ],
+        "properties": "thrown",
+        "_effect": "Confer **frail 2**.",
+        "price": 10
+    },
+    {
+        "name": "Longbow",
+        "damage_dice": 10,
+        "ranges": [
+            "missile 12"
+        ],
+        "properties": "two-handed",
+        "_effect": "Confer **slow 2**.",
+        "price": 200
+    },
+    {
+        "name": "Mace",
+        "damage_dice": 6,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **weak 2**.",
+        "price": 25
+    },
+    {
+        "name": "Maul",
+        "damage_dice": 10,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "two-handed",
+        "_effect": "Confer **inaccurate 2**.",
+        "price": 200
+    },
+    {
+        "name": "Morning Star",
+        "damage_dice": 8,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **bleeding 4**",
+        "price": 75
+    },
+    {
+        "name": "Pike",
+        "damage_dice": 8,
+        "ranges": [
+            "melee 2"
+        ],
+        "properties": "two-handed",
+        "_effect": "**Push 2**. Confer **toppled**.",
+        "price": 100
+    },
+    {
+        "name": "Rod",
+        "damage_dice": 6,
+        "ranges": [
+            "melee",
+            "spell 8"
+        ],
+        "properties": "-",
+        "_effect": "Confer **weary 2**.",
+        "price": 125
+    },
+    {
+        "name": "Short Bow",
+        "damage_dice": 8,
+        "ranges": [
+            "missile 8"
+        ],
+        "properties": "two-handed",
+        "_effect": "Confer **slow 2**.",
+        "price": 75
+    },
+    {
+        "name": "Short Sword",
+        "damage_dice": 6,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **unguarded 2**.",
+        "price": 50
+    },
+    {
+        "name": "Sickle",
+        "damage_dice": 6,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **bleeding 4**.",
+        "price": 50
+    },
+    {
+        "name": "Sling",
+        "damage_dice": 4,
+        "ranges": [
+            "missile 8"
+        ],
+        "properties": "-",
+        "_effect": "Confer **inaccurate 2**.",
+        "price": 10
+    },
+    {
+        "name": "Scythe",
+        "damage_dice": 8,
+        "ranges": [
+            "melee 2"
+        ],
+        "properties": "two-handed",
+        "_effect": "Confer **bleeding 4**.",
+        "price": 125
+    },
+    {
+        "name": "Spear",
+        "damage_dice": 6,
+        "ranges": [
+            "melee 2",
+            "missile 6"
+        ],
+        "properties": "thrown",
+        "_effect": "**Push 2**.",
+        "price": 50
+    },
+    {
+        "name": "Staff",
+        "damage_dice": 6,
+        "ranges": [
+            "melee",
+            "spell 6"
+        ],
+        "properties": "two-handed",
+        "_effect": "**Sweep 1**. Confer **toppled**.",
+        "price": 25
+    },
+    {
+        "name": "Sword",
+        "damage_dice": 8,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **unguarded 2**.",
+        "price": 100
+    },
+    {
+        "name": "Torch",
+        "damage_dice": 6,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **burning 1**.",
+        "price": 5
+    },
+    {
+        "name": "Wand",
+        "damage_dice": 0,
+        "ranges": [
+            "spell 10"
+        ],
+        "properties": "-",
+        "_effect": "-",
+        "price": 100
+    },
+    {
+        "name": "War Hammer",
+        "damage_dice": 8,
+        "ranges": [
+            "melee"
+        ],
+        "properties": "-",
+        "_effect": "Confer **weak 2**.",
+        "price": 50
+    }
+]
