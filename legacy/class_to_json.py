@@ -1,4 +1,4 @@
-from character_sheet import gear
+from legacy.character_sheet import gear
 import json
 
 jsonArr = []

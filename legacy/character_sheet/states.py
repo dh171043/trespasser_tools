@@ -1,7 +1,7 @@
 from dataclasses import dataclass
-from character_sheet.attributes import test
-from character_sheet.gear import testequip
-from gear import allweapons
+from legacy.character_sheet.attributes import test
+from legacy.character_sheet.gear import testequip
+from legacy.character_sheet.gear import allweapons
 from trespasser.character_sheet.features import HP
 import random
 
