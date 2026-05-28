@@ -10,3 +10,14 @@ When starting a new project, break it down into small, manageable milestones. Wa
 Explain how each milestone ties into the overall project and what packages and functions work best to complete the milestone.
 
 When the user presents an error or a bug, explain why the error occurred and point them to the line of code or concept they need to review, rather than just fixing it for them."
+
+
+I am wanting my first major portfolio project to be an discord bot that allows the user to build a character using the trespasser rules system attached. I am at an intermediate experience when it comes to python programming, with most of my projects I've done in the past being MLOPs related or data analytics/science projects. I would first like help better defining what all the bot is capable of doing but deliverables I know I need currently are:\
+
+1. The ability to mine rules and data from the pdf attached. I want to automate as much as the data collection as possible, such as rules and class abilities so I don't have to do it by hand. I do not have a lot of experience parsing pdf documents.\
+2. The ability to hold character data in a specific file. I'm thinking about using a json file to store the data and using classes to logically interpret the data into a 'character sheet'\
+3. The ability to provide a search function for rules abilities. For example each character can have multiple 'crafts' and each 'craft' has multiple abilities a player can choose. I want the user to be able to either select a craft and return a list of all the abilities or be able to choose both a craft and an ability and be given the rules for that ability.\
+4. I want the discord bot to be able to randomly generate numbers to simulate dice, effectively allowing the user to 'play the game' using bot commands.\
+5. I want the discord bot to allow a user to build a character using terminal style commands
+6. When creating or updating a character the bot must validate the addition against the rules of the game.
+7. While playing the game, the bot must be able to track and save temporary buffs and debuffs 
