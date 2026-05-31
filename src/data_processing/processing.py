@@ -1,7 +1,6 @@
 import logging
 from pathlib import Path
 
-import pandas as pd
 import pdfplumber
 
 # allows logging to show time and level of message
@@ -19,7 +18,8 @@ def extract_raw_text(pdf_name: str):
     """Locates the pdf and attempts to extract text"""
     root = get_project_root()
     pdf_path = root / "data" / pdf_name
-    table_output = root / "data/raw/tables"
+    filename = "raw.txt"
+    text_output = root / "data" / "raw" / filename
 
     custom_settings = {
         "vertical_strategy": "text",
@@ -36,20 +36,29 @@ def extract_raw_text(pdf_name: str):
         with pdfplumber.open(pdf_path) as pdf:
 
             logging.info(
-                f"Successfully opened {pdf_name}.\n Total pages: {len(pdf.pages)}"
+                f"Successfully opened {pdf_name}.\nTotal pages: {len(pdf.pages)}"
             )
+            all_text = ""
             for page in pdf.pages[131:135]:
+                print(f"******* {page}*******")
                 width = page.width
                 height = page.height
-                left_column = (0, 0, width / 2, height)
-                right_column = (width / 2, 0, width, height)
+                left_column = (0, 0, width / 2, height - 50)
+                right_column = (width / 2, 0, width, height - 50)
+                page_number = (0, height - 50, width, height)
                 left_text = page.crop(left_column).extract_text()
                 right_text = page.crop(right_column).extract_text()
-                page_contents = left_text + "\n" + right_text
+                page_text = page.crop(page_number).extract_text()
+                page_contents = left_text + "\n" + right_text + "\n" + page_text
+                if page_contents:
+                    all_text += page_contents + "\n"
                 print(f"--- Page {page.page_number} ---\n{page_contents}\n")
-                tables = page.extract_tables(custom_settings)
-                tables = pd.DataFrame(tables)
-                tables.to_csv(f"{table_output}/test.csv", index=True)
+
+        filename = "textint.txt"
+        with open(text_output, "w", encoding="utf-8") as file:
+            file.write(all_text)
+        print(f"File saved to {text_output}")
+
     except Exception as e:
         logging.error(f"An error occured during extraction: {e}")
 
