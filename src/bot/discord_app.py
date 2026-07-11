@@ -24,7 +24,6 @@ def calculate_roll(input):
         num_dice = int(number or 1)
         size_dice = int(dice)
         arithmetic_val = int(arithmetic or 0)
-        print(num_dice, size_dice, arithmetic_val)
 
         dice_rolls = []
         for x in range(num_dice):
@@ -41,9 +40,8 @@ def calculate_roll(input):
 
 @bot.command()
 async def roll(ctx, dice_input:str):
-    result = calculate_roll(dice_input)
-
-    ctx.send(f'{result}')
+    message, result, dice_rolls, arithmetic_val = calculate_roll(test_input)
+    await ctx.send(f'{result}')
     pass
 
 # bot.run(TOKEN)
