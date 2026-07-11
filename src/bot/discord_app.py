@@ -17,7 +17,7 @@ async def on_ready():
     print(f'Bot connected as {bot.user}.')
 
 def calculate_roll(input):
-    pattern = r"(/d+)?d(/d+)([+-]/d+)?"
+    pattern = r"(\d+)?d(\d+)([+-]\d+)?"
     match = re.match(pattern, input)
     if match:
         number, dice, arithmetic = match.groups()
@@ -31,8 +31,7 @@ def calculate_roll(input):
             dice_rolls.append(random.randint(1, size_dice))
         result = sum(dice_rolls) + arithmetic_val
         message = f"You rolled a {result} {dice_rolls} + {arithmetic_val}"
-        return message
-        pass
+        return message, result, dice_rolls, arithmetic_val
     else:
         message = "Invalid format"
         return message
@@ -52,6 +51,6 @@ async def roll(ctx, dice_input:str):
 
 # TESTING BLOCK
 if __name__ == "__main__":
-    test_input = "3d8-2"
-    message = calculate_roll(test_input)
-    print(message)
+    test_input = "d8-2"
+    message, result, dice_rolls, arithmetic_val = calculate_roll(test_input)
+    print(message, result, dice_rolls, arithmetic_val)
