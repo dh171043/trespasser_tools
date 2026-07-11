@@ -17,17 +17,31 @@ async def on_ready():
     print(f'Bot connected as {bot.user}.')
 
 def calculate_roll(input):
-    dice_rolls = []
-    if "+" not in input: input += "+0"
-    number, dice, arithmatic = re.split(r"[d+-]", input)
-    for x in range(int(number)):
-        dice_rolls.append(random.randint(1, int(dice)))
-    result = sum(dice_rolls) + int(arithmatic)
-    message = f"You rolled a {result} {dice_rolls} + {arithmatic}"
-    return dice_rolls, str(result), arithmatic, message
+    pattern = r"(/d+)?d(/d+)([+-]/d+)?"
+    match = re.match(pattern, input)
+    if match:
+        number, dice, arithmetic = match.groups()
+        num_dice = int(number or 1)
+        size_dice = int(dice)
+        arithmetic_val = int(arithmetic or 0)
+        print(num_dice, size_dice, arithmetic_val)
+
+        dice_rolls = []
+        for x in range(num_dice):
+            dice_rolls.append(random.randint(1, size_dice))
+        result = sum(dice_rolls) + arithmetic_val
+        message = f"You rolled a {result} {dice_rolls} + {arithmetic_val}"
+        return message
+        pass
+    else:
+        message = "Invalid format"
+        return message
+
+    
+    
 
 @bot.command()
-async def roll(ctx, dice_input:str, dice_rolls:list, arithmatic):
+async def roll(ctx, dice_input:str):
     result = calculate_roll(dice_input)
 
     ctx.send(f'{result}')
@@ -38,6 +52,6 @@ async def roll(ctx, dice_input:str, dice_rolls:list, arithmatic):
 
 # TESTING BLOCK
 if __name__ == "__main__":
-    test_input = "3d8+2"
-    dice_rolls, result, arithmatic, message = calculate_roll(test_input)
+    test_input = "3d8-2"
+    message = calculate_roll(test_input)
     print(message)
