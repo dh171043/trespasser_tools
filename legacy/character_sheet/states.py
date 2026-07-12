@@ -21,7 +21,6 @@ class Combat_Stats:
     state_damage_dealt: int
     state_damage_taken: int
     state_health: int
-    state_accuracy: int
     state_burning: int
     state_bleeding: int
     state_delirious: int
