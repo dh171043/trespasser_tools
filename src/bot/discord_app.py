@@ -40,15 +40,14 @@ def calculate_roll(input):
 
 @bot.command()
 async def roll(ctx, dice_input:str):
-    message, result, dice_rolls, arithmetic_val = calculate_roll(test_input)
-    await ctx.send(f'{result}')
-    pass
+    message, result, dice_rolls, arithmetic_val = calculate_roll(dice_input)
+    await ctx.send(f'{message}')
 
-# bot.run(TOKEN)
+bot.run(TOKEN)
 
 
-# TESTING BLOCK
-if __name__ == "__main__":
-    test_input = "d8-2"
-    message, result, dice_rolls, arithmetic_val = calculate_roll(test_input)
-    print(message, result, dice_rolls, arithmetic_val)
+# # TESTING BLOCK
+# if __name__ == "__main__":
+#     test_input = "d8-2"
+#     message, result, dice_rolls, arithmetic_val = calculate_roll(test_input)
+#     print(message, result, dice_rolls, arithmetic_val)

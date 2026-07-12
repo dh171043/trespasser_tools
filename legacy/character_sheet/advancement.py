@@ -1,19 +1,40 @@
 from dataclasses import dataclass
 from enum import Enum
 
+@dataclass
+class Clock:
+    total_segments: int
+    completed_segments: int = 0
+
+@dataclass
+class Injury:
+    name: str
+    injury_clock: Clock
+    effect: str
+
+@dataclass
+class Plight:
+    name: str
+    effect: str
+
+@dataclass
 class Health:
-    def __init__(self, HP, recovery_dice, endurance,
-                 injury1, injury1_name, injury1_clock, injury1_effect,
-                 injury2, injury2_name, injury2_clock, injury2_effect,
-                 injury3, injury3_name, injury3_clock, injury3_effect):
-        self.HP = HP
-        self.recover_dice = recovery_dice
-        self.endurance = endurance
-        self.injury1 = [injury1_name, injury1_clock, injury1_effect]
-        self.injury2 = [injury2_name, injury2_clock, injury2_effect]
-        self.injury3 = [injury3_name, injury3_clock, injury3_effect]
+    current_hp: int
+    max_hp: int
+    current_recovery_dice: int
+    maximum_recovery_dice: int
+    current_endurance: int
+    maximum_endurance: int
+    plight1: Plight
+    plight2: Plight
+    plight3: Plight
+    injury1: Injury
+    injury2: Injury
+    injury3: Injury
+    
 
 
+    
 
 @dataclass
 class Alignment:
