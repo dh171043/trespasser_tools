@@ -54,10 +54,11 @@ def extract_raw_text(pdf_name: str):
                     all_text += page_contents + "\n"
                 print(f"--- Page {page.page_number} ---\n{page_contents}\n")
 
-        filename = "textint.txt"
+
         with open(text_output, "w", encoding="utf-8") as file:
             file.write(all_text)
         print(f"File saved to {text_output}")
+        return all_text
 
     except Exception as e:
         logging.error(f"An error occured during extraction: {e}")
@@ -67,7 +68,11 @@ def main():
     project_root = get_project_root()
     print(project_root)
     rules = "Trespasser v2.1.3 - Rulebook.pdf"
-    extract_raw_text(rules)
+    all_text = extract_raw_text(rules)
+    lines = all_text.splitlines()
+    print(lines)
+
+
 
 
 if __name__ == "__main__":
