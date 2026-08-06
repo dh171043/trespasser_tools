@@ -787,7 +787,7 @@ testequip = Equipment(
 print(testequip.mainhand.effect, testequip.offhand.name, testequip.head_slot.ar_roll)
 
 
-# ==================== EQUIPMENT AND INVENTORY ====================
+# ==================== COMBAT STATS ====================
 @dataclass
 class Combat_Stats:
     attributes: Attrs_Skills
