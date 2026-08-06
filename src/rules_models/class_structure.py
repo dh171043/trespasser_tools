@@ -887,23 +887,25 @@ class Combat_Stats:
         text_burn = f"The flames lick your flesh. You take {burn_dmg} damage."
         Health.current_hp = Health.current_hp - burn_dmg
         return text_burn
-
-    delirious_actions = {
-        1: f"ACTION | Fling something at the nearest creature, dealing {random.randint(1, Attributes.skill_die)}",
-        2: f"ACTION | Hurt yourself, and suffer {random.randint(1, Attributes.skill_die)} damage.",
-        3: f"ACTION | Stumble half {speed} squares in direction {random.randint(1,8)}",
-        4: "ACTION | Stare blankly and do nothing.",
-        5: "No Effect",
-        6: "No Effect",
-    }
-
     @property
-    def delirious(self, delirious_actions):
+    def delirious_results(self):
+        delirious_dmg =random.randint(1, self.attributes.attributes.skill_die)
+        delirious_actions = {
+            1: f"ACTION | Fling something at the nearest creature, dealing {delirious_dmg} damage.",
+            2: f"ACTION | Hurt yourself, and suffer {delirious_dmg} damage.",
+            3: f"ACTION | Stumble half {self.speed} squares in direction {random.randint(1,8)}",
+            4: "ACTION | Stare blankly and do nothing.",
+            5: "No Effect",
+            6: "No Effect"
+        }
+        return delirious_actions
+    @property#
+    def delirious_roll(self):
         del_numbers = []
         for i in range(min(self.state_delirious, 3)):
             del_numbers.append(random.randint(1, 6))
         for i in del_numbers:
-            print(delirious_actions[i])
+            print(delirious_results.delirious_actions[i])
 
     @property
     def toppled(self):
