@@ -26,7 +26,6 @@ blood = Craft(
     feature2_desc="You gain a spark when doing life magic",
 )
 
-print(blood.name)
 
 
 @dataclass
@@ -129,4 +128,3 @@ cleric = Chassis(
     enhancements=[],
 )
 
-print(cleric.crafts[0])

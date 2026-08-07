@@ -494,4 +494,4 @@ testequip = Equipment(
     talisman_slot=dummy_talisman,
 )
 
-print(testequip.mainhand.effect, testequip.offhand.name, testequip.head_slot.ar_roll)
+

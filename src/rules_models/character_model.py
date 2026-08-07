@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Callable, Union
 from chassis import Chassis
-from loadout import Equipment
+from loadout import Equipment, testequip
 
 
 # ==================== CHARACTER RECORD ====================
@@ -37,6 +37,7 @@ class Skills:
     crafting: bool
     folklore: bool
     letters: bool
+    magic: bool
     nature: bool
     perception: bool
     speech: bool
@@ -259,7 +260,7 @@ class Combat_Stats:
         for i in range(min(self.state_delirious, 3)):
             del_numbers.append(random.randint(1, 6))
         for i in del_numbers:
-            print(delirious_results.delirious_actions[i])
+            print(self.delirious_results[i])
 
     @property
     def toppled(self):
@@ -304,7 +305,7 @@ class Combat_Stats:
         return self.accuracy, self.guard, self.resist
 
 
-print(Combat_Stats.initiative)
+# print(Combat_Stats.initiative)
 
 
 @dataclass
