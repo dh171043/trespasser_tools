@@ -4,6 +4,7 @@ from enum import Enum
 from typing import Callable, Union
 from chassis import Chassis
 from loadout import Equipment, testequip
+from mechanics import Clock
 
 
 # ==================== CHARACTER RECORD ====================
@@ -52,11 +53,6 @@ class Attrs_Skills:
 
 
 # ==================== HEALTH AND HEALING ====================
-@dataclass
-class Clock:
-    total_segments: int
-    completed_segments: int = 0
-
 
 @dataclass
 class Injury:

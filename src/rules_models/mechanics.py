@@ -20,3 +20,8 @@ class Shadows:
     loud: bool
     harmful: bool
     daunting: bool
+
+@dataclass
+class Clock:
+    total_segments: int
+    completed_segments: int = 0
