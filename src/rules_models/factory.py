@@ -140,3 +140,6 @@ def create_attributes(past_life = PastLife, advancement = Advancement) -> Attrib
         skill=skill,
         skill_die=skill_die
     )
+
+
+view_character_model()

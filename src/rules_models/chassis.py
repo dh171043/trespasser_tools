@@ -11,6 +11,7 @@ HP = 12
 class Craft:
     name: str
     key: str
+    craft_hp: int
     feature1: str
     feature1_desc: str
     feature2: str
@@ -20,6 +21,7 @@ class Craft:
 blood = Craft(
     name="Blood",
     key="Might",
+    craft_hp=0,
     feature1="Blood Manipulation",
     feature1_desc="do cool blood things",
     feature2="Life Affinity",
@@ -109,6 +111,7 @@ revelation = Feature(
 
 @dataclass
 class Chassis:
+    calling_hp = int
     features: list[Feature]
     crafts: list[Craft]
     light_deeds: list[Deed]
@@ -119,6 +122,7 @@ class Chassis:
 
 
 cleric = Chassis(
+    calling_hp= 5,
     features=[ex_fort, sac_spell, devo, revelation],
     crafts=[blood],
     light_deeds=[Incision],
