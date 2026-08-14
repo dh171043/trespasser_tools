@@ -1,0 +1,38 @@
+project/
+├── models/
+│   ├── __init__.py
+│   ├── base.py              # Basic dataclasses (Record, Attributes, Skills)
+│   ├── health.py            # Health, Injury, Plight
+│   ├── advancement.py       # Lineage, PastLife, Calling, Alignment, Advancement
+│   ├── combat.py            # Combat_Stats
+│   └── character.py         # Character (imports from other model files)
+│
+├── equipment/
+│   ├── __init__.py
+│   ├── weapons.py           # Weapon class and instances
+│   ├── armor.py             # Armor class and instances
+│   ├── magic_items.py       # Amulet, Ring, Talisman
+│   └── loadout.py           # Equipment class
+│
+├── abilities/
+│   ├── __init__.py
+│   ├── crafts.py            # Craft class and instances
+│   ├── deeds.py             # Deed class and instances
+│   ├── features.py          # Feature, Talent, Enhancement
+│   └── chassis.py           # Chassis class
+│
+├── mechanics/
+│   ├── __init__.py
+│   ├── sparks_shadows.py    # Sparks, Shadows
+│   └── clocks.py            # Clock
+│
+├── factory/
+│   ├── __init__.py
+│   ├── input_helpers.py     # get_int_input, get_bool_input, get_choice_input
+│   ├── character_factory.py # Character creation functions
+│   └── cli.py               # Main CLI interface
+│
+└── data/
+    ├── weapon_data.py       # All weapon instances
+    ├── armor_data.py        # All armor instances
+    └── craft_data.py        # All craft/deed instances

@@ -1,0 +1,1 @@
+human = Lineage(race="Race of Man", curse="Curse of Power", gift="Human Ingenuity")

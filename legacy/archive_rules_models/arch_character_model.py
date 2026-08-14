@@ -1,9 +1,9 @@
-import random
-from dataclasses import dataclass
-from enum import Enum
-from typing import Callable, Union
-from chassis import Chassis
-from loadout import Equipment, testequip
+# import random
+# from dataclasses import dataclass
+# from enum import Enum
+# from typing import Callable, Union
+from archive_rules_models.arch_chassis import Chassis
+from archive_rules_models.arch_loadout import Equipment, testequip
 from mechanics import Clock
 
 
@@ -29,6 +29,10 @@ class Attributes:
     @property
     def key(self):
         return getattr(self, self._key)
+    @property
+    def skill_roll(self) -> int:
+        roll = random.randint(1, self.skill_die)
+        return roll
 
 
 @dataclass
@@ -60,12 +64,21 @@ class Injury:
     injury_clock: Clock
     effect: str
 
+empty_injury= Injury(
+    name = "",
+    injury_clock= Clock(4, 0),
+    effect=""
+)
 
 @dataclass
 class Plight:
     name: str
     effect: str
 
+empty_plight = Plight(
+    name="",
+    effect=""
+)
 
 @dataclass
 class Health:
@@ -183,7 +196,7 @@ class Combat_Stats:
     @property
     def guard(self):
         armor_bonus = 0
-        for item in testequip:
+        for item in self.equipment:
             if item.ar:
                 armor_bonus += item.ar
         return self.attributes.attributes.agility + armor_bonus + self.state_guard
@@ -215,7 +228,7 @@ class Combat_Stats:
     @property
     def speed(self):
         armor_weight = 0
-        for item in testequip:
+        for item in self.equipment:
             if item.wgt:
                 if item.wgt == "H":
                     armor_weight += 1
@@ -301,7 +314,7 @@ class Combat_Stats:
         return self.accuracy, self.guard, self.resist
 
 
-# print(Combat_Stats.initiative)
+print(Combat_Stats.initiative)
 
 
 @dataclass

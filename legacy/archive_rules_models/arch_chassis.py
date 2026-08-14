@@ -2,76 +2,17 @@ import random
 from dataclasses import dataclass
 from enum import Enum
 from typing import Callable, Union
+from archive_rules_models.arch_loadout import Weapon, allweapons
+from archive_rules_models.arch_craft_deed import Craft, Deed, allcrafts, alldeeds
+
 
 # ==================== FEATURES AND TALENS ====================
 HP = 12
 
 
-@dataclass
-class Craft:
-    name: str
-    key: str
-    craft_hp: int
-    feature1: str
-    feature1_desc: str
-    feature2: str
-    feature2_desc: str
 
+weapon = Weapon
 
-blood = Craft(
-    name="Blood",
-    key="Might",
-    craft_hp=0,
-    feature1="Blood Manipulation",
-    feature1_desc="do cool blood things",
-    feature2="Life Affinity",
-    feature2_desc="You gain a spark when doing life magic",
-)
-
-
-
-@dataclass
-class Weapon_dummy:
-    name: str
-    damage: int
-    range: list[str]
-    properties: str
-    effect: str
-    price: int
-
-
-weapon = Weapon_dummy(
-    name="hatchet",
-    damage=6,
-    range=["melee", "missile 4"],
-    properties="thrown",
-    effect="Confer frail 2.",
-    price=10,
-)
-
-
-@dataclass
-class Deed:
-    name: str
-    type: str
-    target: str
-    strength: str
-    base: str
-    hit: str
-    spark: str
-    special: str
-
-
-Incision = Deed(
-    name="Incision",
-    type="VERSATILE ATTACK VS. GUARD",
-    target="1 Creature",
-    strength="Light",
-    base="",
-    hit=f"deal {weapon.damage} damage. Confer bleeding 2.",
-    spark="Confer bleeding 4 instead.",
-    special="",
-)
 
 
 @dataclass
@@ -80,7 +21,6 @@ class Talent:
     desc: str
 
 
-blank_talent = Talent(name="Blank Talent", desc="Blank Talent")
 
 
 @dataclass
@@ -89,14 +29,15 @@ class Enhancement:
     desc: str
 
 
-blank_enhancement = Enhancement(name="Blank Enhancement", desc="Blank Enhancement")
-
 
 @dataclass
 class Feature:
     name: str
     description: str
 
+blank_talent = Talent(name="Blank Talent", desc="Blank Talent")
+
+blank_enhancement = Enhancement(name="Blank Enhancement", desc="Blank Enhancement")
 
 ex_fort = Feature(
     "Expert Fortitude",
